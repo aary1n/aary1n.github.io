@@ -1,0 +1,5 @@
+# keep LF line endings, which is what build.py writes
+* text=auto eol=lf
+*.webp binary
+*.jpg binary
+*.png binary

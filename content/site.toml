@@ -1,0 +1,52 @@
+# Site-wide settings.
+# Anything written as [PLACEHOLDER ...] is highlighted on the page until replaced.
+
+name = "aaryan sharif"
+title = "aaryans.page"
+url = "https://aaryans.page"   # used for share links and preview cards
+description = "i'm a third year materials student and researcher at imperial."
+
+# Sections that show the "you're early!" page instead of their content: while you're moving things in, or fixing
+# something. Any of "blog", "flowers"; [] opens everything. The words on that page are in content/building.md.
+building = ["blog"]
+
+# Drawings used for butterflies. Swap in scanned PNGs from tools/process_drawing.py (put them in static/img/).
+butterflies = ["/assets/img/butterfly-1.svg", "/assets/img/butterfly-2.svg"]
+
+# Top-right links (hidden on phones; also listed in the footer).
+[[links]]
+label = "x"
+href = "https://x.com/portc10"
+
+[[links]]
+label = "github"
+href = "https://github.com/aary1n"
+
+[[links]]
+label = "linkedin"
+href = "https://www.linkedin.com/in/aaryansharif/"
+
+# [[links]]
+# label = "email"
+# href = "mailto:you@example.com"
+
+# Blog legend. A post picks one with `category = "<key>"`. Colours are the title-chip backgrounds.
+[[categories]]
+key = "essay"
+label = "essay"
+colour = "#4d3b1b"
+
+[[categories]]
+key = "research"
+label = "research"
+colour = "#25381f"
+
+[[categories]]
+key = "project"
+label = "project"
+colour = "#47271f"
+
+[[categories]]
+key = "note"
+label = "note"
+colour = "#2d2c40"

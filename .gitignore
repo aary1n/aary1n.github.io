@@ -1,0 +1,12 @@
+# originals never leave this machine
+raw/
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# reference images and notes that stay local
+Screenshot*.png
+BRIEF.md
