@@ -262,6 +262,13 @@ class Builder:
                  f"--flip:{r.choice([1, -1])}")
         return f'<span class="bfly {cls}" style="{style}" aria-hidden="true"><i></i></span>'
 
+    def logo(self):
+        """The painted butterfly beside the name (the same drawing as the favicon). data-tail is where the end of
+        its body sits, as a fraction of the box, and data-dir the way the body points (degrees, clockwise from
+        east); flight.js starts the trail there."""
+        return (f'<span class="bfly bfly--name bfly--painted" data-tail="0.61 0.62" data-dir="42.5" aria-hidden="true">'
+                f'<img src="/assets/img/favicon.svg?v={self.icon_v}" alt=""></span>')
+
     @staticmethod
     def alt(p):
         if p.get("alt"):
@@ -333,7 +340,7 @@ class Builder:
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="name" href="/">{esc(s['name'])}{self.butterfly("name", "bfly--name")}</a>
+  <a class="name" href="/">{esc(s['name'])}{self.logo()}</a>
   <nav class="nav" aria-label="Main">{nav}</nav>
   <div class="right">
     <div class="elsewhere">{links}</div>

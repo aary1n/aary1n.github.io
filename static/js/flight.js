@@ -50,6 +50,11 @@
   // The tail end of the drawing, in page coordinates, and the direction the body points away from the head.
   function tail() {
     const r = bfly.getBoundingClientRect();
+    if (bfly.dataset.tail) {  // a drawing that says where its tail is (the painted logo)
+      const [fx, fy] = bfly.dataset.tail.split(" ").map(Number);
+      return { x: r.left + r.width * fx + scrollX, y: r.top + r.height * fy + scrollY,
+               dir: (Number(bfly.dataset.dir) || 90) * Math.PI / 180 };
+    }
     const rot = (parseFloat(getComputedStyle(bfly).getPropertyValue("--rot")) || 0) * Math.PI / 180;
     const d = bfly.offsetHeight * 0.26;  // the end of the body sits about a quarter of the height below the centre
     return {
